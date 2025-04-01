@@ -1,0 +1,24 @@
+class LoveStory(Scene):
+    def construct(self):
+        title = Text("Our Beautiful Journey", font_size=48, color=BLUE)
+        self.play(Write(title))
+        self.wait(2)
+        self.play(FadeOut(title))
+        
+        moments = [
+            "The day we met ❤️",
+            "Our first date ☕",
+            "Endless late-night talks 🌙",
+            "Unforgettable trips ✈️",
+            "A future together 💍"
+        ]
+
+        for moment in moments:
+            text = Text(moment, font_size=36)
+            self.play(Write(text))
+            self.wait(2)
+            self.play(FadeOut(text))
+
+        final_text = Text("Happy Birthday, My Love! 🎂", font_size=48, color=RED)
+        self.play(Write(final_text))
+        self.wait(3)
